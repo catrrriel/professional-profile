@@ -1,3 +1,24 @@
+### Próximas tareas
+
+Definir una escala tipográfica
+   - Niveles de títulos
+   - Texto principal
+   - Metadata (`time`, enlaces, información secundaria)
+
+Definir un sistema de espaciados.
+   - Espacio chico (elementos relacionados).
+   - Espacio medio (título => contenido).
+   - Espacio grande (entre componentes).
+
+Revisar la ubicación de "Experiencia académica".
+
+Revisar nombres de algunos componentes.
+   - Analizar si `project` representa correctamente el concepto o si conviene un nombre más específico
+
+Revisar posibles patrones repetidos
+
+---
+
 # Notas de desarrollo
 
 ## 23/7/2026
@@ -45,21 +66,22 @@ Algunos criterios de unidades
 
 ---
 
-### Próximas tareas
+## 31/7/2026
 
-Definir una escala tipográfica
-   - Niveles de títulos
-   - Texto principal
-   - Metadata (`time`, enlaces, información secundaria)
+### Tipografía
 
-Definir un sistema de espaciados.
-   - Espacio chico (elementos relacionados).
-   - Espacio medio (título => contenido).
-   - Espacio grande (entre componentes).
+| Rol | Tamaño | Peso | Color | Ejemplos |
+| --- | --- | --- | --- | --- | 
+| Nombre principal | 2rem/32px | 700 | #111 | AMILCAR CATRIEL PAZ |
+| Sección | 1.2rem/19px | 600 | #222 | Perfil, Proyectos, Educación |
+| Título | 1rem/16px | 600 | #222 | Lenguajes, Attendance System, UNLP |
+| Texto | 1rem/16px | 400 | #333 | Descripciones, carrera, features |
+| Metadata | .875rem/14px | 400 | #666 | Fechas, enlaces |
 
-Revisar la ubicación de "Experiencia académica".
 
-Revisar nombres de algunos componentes.
-   - Analizar si `project` representa correctamente el concepto o si conviene un nombre más específico
 
-Revisar posibles patrones repetidos
+
+
+
+
+---

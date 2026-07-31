@@ -13,11 +13,65 @@ ul{
 /* ==============================
     Foundation - Decisiones globales
 ============================== */
+:root{
+    --text-display:2rem;
+    --text-section:1.2rem;
+    --text-body:1rem;
+    --text-title:1rem;
+    --text-meta:0.875rem;
+
+    --weight-bold:700;
+    --weight-semibold:600;
+    --weight-regular:400;
+
+    --color-heading:#111;
+    --color-body:#333;
+    --color-meta:#666;
+    --surface-muted:#f3f3f3;
+
+    --space-2xs:2px;
+    --space-xs:4px;
+    --space-sm:8px;
+    --space-md:16px;
+    --space-lg:24px;
+
+    --radius-sm:4px;
+}
+
 body{
-    font-family: "Calibri";
-    font-size: 16px;
-    line-height: 1.2;
+    font-family: "Calibri","sans-serif";
+    font-size: var(--text-body);
+    font-weight: var(--weight-regular);
+    color: var(--color-body);
+    line-height: 1.35;
     background-color: #bbbbbb;
+}
+
+h1{
+    font-size: var(--text-display);
+    font-weight: var(--weight-bold);
+    color: var(--color-heading);
+}
+
+h3{
+    font-size: var(--text-section);
+    font-weight: var(--weight-semibold);
+    color: var(--color-heading);
+}
+
+h4{
+    font-size: var(--text-title);
+    font-weight: var(--weight-semibold);
+    color: var(--color-heading);
+}
+
+a{
+    color:var(--color-body);
+}
+
+time{
+    font-size: var(--text-meta);
+    color: var(--color-meta);
 }
 
 .resume{
@@ -25,7 +79,7 @@ body{
     min-height: 297mm;
     margin: 2rem auto;
     background-color: white;
-    padding: 24px;
+    padding: var(--space-lg);
 }
 
 /* ==============================
@@ -34,12 +88,17 @@ body{
 main {
     display: grid;
     grid-template-columns: 1fr 2.3fr;
-    gap: 24px;
+    gap: var(--space-lg);
 }
 
 /* ==============================
     Componentes
 ============================== */
+
+.stack{
+    display: flex;
+    flex-direction: column;
+}
 
 /* HEADER */
 header{
@@ -47,19 +106,18 @@ header{
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid;
-    padding-bottom: 16px;
-    margin-bottom: 16px;
+    padding-bottom: var(--space-md);
+    margin-bottom: var(--space-md);
 }
 
 .header-info{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    gap: 4px;
+    gap: var(--space-sm);
 }
 
 .subtitle{
-    font-size: 1.3rem;
+    font-size: var(--text-section);
+    font-weight: var(--weight-semibold);
 }
 
 .profile-photo{
@@ -71,56 +129,63 @@ header{
 
 /* CONTENIDO PRINCIPAL */
 .main-content {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
+    row-gap: var(--space-lg);
 }
 
 /* Perfil profesional */
 .profile-section{
-    display: flex;
-    flex-direction: column;
-    row-gap: 6px;
+    row-gap: var(--space-xs);
 }
 
 /* Proyectos */
 .project-section{
-    display: flex;
-    flex-direction: column;
-    row-gap: 6px;
+    row-gap: var(--space-sm);
 }
 
 .project-list{
-    display: flex;
-    flex-direction: column;
-    row-gap: 10px;
+    row-gap: var(--space-md);
 }
 
 .project{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    gap: var(--space-sm);
 }
+
+.feature-list{
+    list-style: inside;
+    row-gap: var(--space-xs);
+}
+
+/* Experiencia */
+.experience-section{
+    row-gap: var(--space-sm);
+}
+
+.experience-list{
+    list-style: inside;
+    list-style-type: square;
+    row-gap: var(--space-xs);
+}
+
+.experience{
+    row-gap: var(--space-sm);
+}
+
 
 /* INFORMACION COMPLEMENTARIA */
 aside {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    gap: var(--space-lg);
 }
 
 /* Contactos */
 .contact-list{
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    gap: var(--space-xs);
 }
 
 .contact-item{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4px;
+    gap: var(--space-xs);
 }
 
 .icon{
@@ -130,15 +195,11 @@ aside {
 
 /* Tecnologias */
 .tech-section{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    gap: var(--space-md);
 }
 
 .tech-group{
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
+    row-gap: var(--space-sm);
 }
 
 .tech-list{
@@ -146,40 +207,32 @@ aside {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 12px;
-    row-gap: 4px;
+    column-gap: var(--space-sm);
+    row-gap: var(--space-sm);
 }
 
 .tech-item{
-    padding:2px 6px;
-    border-radius:4px;
-    background:#e5e5e5;
-    font-size:.9rem;
+    padding:var(--space-2xs) var(--space-sm);
+    border-radius: var(--radius-sm);
+    background: var(--surface-muted);
+    font-size: var(--text-meta);
 }
 
 /* Skills */
 .skill-section{
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-}
-.skill-list{
-    list-style: inside;
+    row-gap: var(--space-sm);
 }
 
 /* Educacion */
 .education-section{ 
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
+    row-gap: var(--space-sm);
 }
 
 .education-list{
-    display: flex;
-    flex-direction: column;
-    row-gap: 4px;
+    row-gap: var(--space-xs);
 }
 
-time{
-    font-size: .85rem;
-}
+.institution{
+    font-weight: var(--weight-bold);
+} 
+
